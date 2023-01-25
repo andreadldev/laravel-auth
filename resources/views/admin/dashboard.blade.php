@@ -13,8 +13,12 @@
                         {{ session('status') }}
                     </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                    <div class="text-center d-flex flex-column">
+                        <a href="{{ url('admin/projects') }}">
+                            <i class="fs-1 py-3 fa-solid fa-door-open"></i>
+                        </a>
+                        {{ __('You are logged in!') }}
+                    </div>
                 </div>
             </div>
         </div>
