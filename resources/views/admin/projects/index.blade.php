@@ -1,4 +1,29 @@
 @extends('layouts.admin')
 @section('content')
-<h1>Hello world</h1>
+<div class="p-3">
+    <h1>Lista progetti</h1>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Slug</th>
+            <th scope="col">Descrizione</th>
+            <th scope="col">Data di creazione</th>
+        </tr>
+    </thead>
+  <tbody>
+    @foreach ($projects as $project)
+    <tr style="cursor:pointer;" onclick="window.location='{{ route('admin.projects.show', $project->id) }}'">
+        <th scope="row">{{ $project->id }}</th>
+        <td>{{ $project->name }}</td>
+        <td>{{ $project->slug }}</td>
+        <td>{{ $project->description }}</td>
+        <td>{{ substr($project->created_at, 0, -9)}}</td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
 @endsection

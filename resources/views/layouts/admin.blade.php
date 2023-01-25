@@ -94,6 +94,15 @@
                     Dashboard
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-white {{ Route::currentRouteName() == 'admin.projects.index' || Route::currentRouteName() ==  'admin.projects.show' ? 'bg-secondary' : '' }}"
+                    href="{{route('admin.projects.index')}}"
+                  >
+                    <i class="fa-solid fa-folder fa-lg fa-fw"></i>
+                    Progetti
+                  </a>
+                </li>
               </ul>
             </div>
           </nav>

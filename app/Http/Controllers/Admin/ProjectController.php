@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
+use Illuminate\Support\Facades\Schema;
 
 class ProjectController extends Controller
 {
@@ -17,6 +18,7 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::all();
+        // $columns = Schema::getColumnListing('projects');
         return view('admin.projects.index', compact('projects'));
     }
 
@@ -49,7 +51,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+        return view('admin.projects.show', compact('project'));
     }
 
     /**
