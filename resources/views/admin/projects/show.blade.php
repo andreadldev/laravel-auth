@@ -6,7 +6,7 @@
     </a>
     <div>
         <a class="me-3" href="{{ route('admin.projects.edit', $project->slug) }}">Modifica</a>
-        <a href="{{ route('admin.projects.edit', $project->slug) }}">Elimina</a>
+        <a href="">Elimina</a>
         <h2>{{ $project->id }}. {{ $project->name }}</h2> 
     </div>
     <h6>({{ $project->slug }})</h6>
