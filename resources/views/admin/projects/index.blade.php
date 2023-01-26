@@ -16,7 +16,7 @@
     </thead>
   <tbody>
     @foreach ($projects as $project)
-    <tr style="cursor:pointer;" onclick="window.location='{{ route('admin.projects.show', $project->id) }}'">
+    <tr style="cursor:pointer;" onclick="window.location='{{ route('admin.projects.show', $project->slug) }}'">
         <th scope="row">{{ $project->id }}</th>
         <td>{{ $project->name }}</td>
         <td>{{ $project->slug }}</td>
