@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
@@ -29,7 +30,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.projects.create');
     }
 
     /**
@@ -40,7 +41,18 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:150',
+            'description' => 'required|string|max:255',
+        ]);
+        $data = $request->all();
+        $new_project = new Project();
+        $new_project->name = $data['name'];
+        $new_project->description = $data['description'];
+        $new_project->slug = Str::slug($new_project->name);
+        $new_project->save();
+        
+        return redirect()->route('admin.projects.index')->with('message', "Il progetto $new_project->title è stato creato con successo.");
     }
 
     /**

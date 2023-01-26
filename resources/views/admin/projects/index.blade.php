@@ -4,6 +4,8 @@
     <h1>Lista progetti</h1>
 </div>
 
+<a class="btn btn-primary mb-3" href="{{ route('admin.projects.create') }}">Aggiungi</a>
+
 <table class="table table-hover">
     <thead>
         <tr>
