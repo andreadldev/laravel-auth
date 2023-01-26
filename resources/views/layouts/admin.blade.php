@@ -96,7 +96,7 @@
                 </li>
                 <li class="nav-item">
                   <a
-                    class="nav-link text-white {{ Route::currentRouteName() == 'admin.projects.index' || Route::currentRouteName() ==  'admin.projects.show' ? 'bg-secondary' : '' }}"
+                    class="nav-link text-white {{ Route::currentRouteName() == 'admin.projects.index' || Route::currentRouteName() ==  'admin.projects.show' || Route::currentRouteName() ==  'admin.projects.edit' ? 'bg-secondary' : '' }}"
                     href="{{route('admin.projects.index')}}"
                   >
                     <i class="fa-solid fa-folder fa-lg fa-fw"></i>
