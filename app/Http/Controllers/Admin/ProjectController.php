@@ -20,7 +20,7 @@ class ProjectController extends Controller
     {
         $projects = Project::all();
         // $columns = Schema::getColumnListing('projects');
-        return view('admin.projects.index', compact('projects'));
+        return view('admin.projects.index', compact('projects'))->with('message', "Progetto creato con successo");
     }
 
     /**
@@ -104,7 +104,7 @@ class ProjectController extends Controller
         };
 
         $project->update($data);
-        return redirect()->route('admin.projects.show', compact('project'));
+        return redirect()->route('admin.projects.show', compact('project'))->with('message', "Modifica effettuata");
     }
 
     /**

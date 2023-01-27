@@ -1,6 +1,8 @@
 @extends('layouts.admin')
 @section('content')
-<div class="p-3">
+
+@include('partials.message')
+<div class="p-3 pt-4">
     <h1>Lista progetti</h1>
 </div>
 
