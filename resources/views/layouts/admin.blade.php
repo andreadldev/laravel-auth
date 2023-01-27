@@ -33,7 +33,7 @@
   <body>
     <div id="app">
       <header
-        class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-2 shadow"
+        class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-2 shadow position-fixed w-100"
       >
         <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/"
           >BoolPress</a
@@ -77,11 +77,11 @@
         </div>
       </header>
 
-      <div class="container-fluid vh-100">
+      <div class="container-fluid vh-100 py-5">
         <div class="row h-100">
           <nav
             id="sidebarMenu"
-            class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse"
+            class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse position-fixed h-100"
           >
             <div class="position-sticky pt-3">
               <ul class="nav flex-column">

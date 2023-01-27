@@ -14,6 +14,9 @@
     <h6>({{ $project->slug }})</h6>
     <small>{{ substr($project->created_at, 0, -9)}}</small>
     <p>{{ $project->description }}</p>
+    @if ($project->image)
+        <img class="w-25" src="{{ asset('storage/'.$project->image) }}" alt="...">
+    @endif
 </div>
 @include('partials.modal')
 @endsection
